@@ -355,18 +355,402 @@ Backpack là công cụ dùng để:
 * Lưu Block tạm thời
 * Chuyển Block giữa các Screen
 
-# Kết luận
+# Trả lời câu hỏi
 
-Ứng dụng đã hoàn thành các yêu cầu:
+## 1. Giới thiệu
 
-✔ Screen giới thiệu bản thân
+MIT App Inventor là môi trường lập trình trực quan (Visual Programming) cho phép xây dựng ứng dụng Android bằng phương pháp kéo thả (Drag & Drop) mà không cần viết nhiều mã nguồn.
 
-✔ Screen giải phương trình bậc 2
+Trong bài thực hành, ứng dụng gồm 3 màn hình (Screen):
 
-✔ Screen sử dụng WebViewer
+* Screen1: Giới thiệu bản thân (About).
+* Screen2: Giải bài toán đơn giản.
+* Screen3: Hiển thị Website bằng WebViewer.
 
-✔ Điều hướng giữa các Screen bằng Button
+---
 
-✔ Áp dụng lập trình trực quan bằng Block của MIT App Inventor
+# 2. Quy trình tạo phần mềm trên MIT App Inventor
 
-Qua bài tập, sinh viên hiểu được quy trình thiết kế giao diện kéo thả, thay đổi thuộc tính đối tượng và xây dựng chức năng bằng Block Programming trên nền tảng MIT App Inventor.
+Quy trình phát triển ứng dụng gồm các bước:
+
+### Bước 1: Tạo Project
+
+* Truy cập MIT App Inventor.
+* Chọn Create New Project.
+* Đặt tên Project.
+
+Ví dụ:
+
+```text
+MyMobileApp
+```
+
+---
+
+### Bước 2: Thiết kế giao diện (Designer)
+
+Tại màn hình Designer:
+
+* Kéo thả các thành phần giao diện.
+* Sắp xếp bố cục.
+* Thay đổi thuộc tính.
+
+Ví dụ:
+
+* Label
+* Button
+* TextBox
+* Image
+* WebViewer
+* HorizontalArrangement
+* VerticalArrangement
+
+---
+
+### Bước 3: Lập trình xử lý (Blocks)
+
+Chuyển sang tab Blocks:
+
+* Kéo các khối lệnh.
+* Ghép các khối lại thành chương trình hoàn chỉnh.
+* Xử lý sự kiện.
+* Thực hiện tính toán.
+* Chuyển màn hình.
+
+---
+
+### Bước 4: Chạy thử
+
+Có thể chạy bằng:
+
+* AI Companion
+* Emulator
+* Xuất file APK
+
+---
+
+## 3. Mô tả ứng dụng 3 Screen
+
+### Screen1 – About
+
+Chức năng:
+
+* Hiển thị họ tên.
+* Hiển thị MSSV.
+* Hiển thị ảnh cá nhân.
+* Có 2 nút chuyển màn hình.
+
+Thành phần sử dụng:
+
+* Label
+* Image
+* Button
+
+Nút 1:
+
+```text
+Chuyển sang Screen2
+```
+
+Nút 2:
+
+```text
+Chuyển sang Screen3
+```
+
+---
+
+### Screen2 – Giải bài toán đơn giản
+
+Ví dụ:
+
+Giải phương trình bậc hai:
+
+```text
+ax² + bx + c = 0
+```
+
+Thành phần:
+
+* TextBox nhập a
+* TextBox nhập b
+* TextBox nhập c
+* Button Giải
+* Label hiển thị kết quả
+
+Chức năng:
+
+* Nhận dữ liệu người dùng.
+* Tính toán.
+* Hiển thị nghiệm.
+
+---
+
+### Screen3 – WebViewer
+
+Thành phần:
+
+* WebViewer
+
+Chức năng:
+
+* Hiển thị website có sẵn.
+* Tương thích giao diện điện thoại.
+
+Ví dụ:
+
+```text
+https://k58kmt.tdh.io.vn
+```
+
+Người dùng có thể tương tác trực tiếp với website trong ứng dụng.
+
+---
+
+# 4. Thanh công cụ của MIT App Inventor
+
+Giao diện Designer gồm các khu vực chính:
+
+### Palette
+
+Chứa các thành phần có thể kéo thả:
+
+* User Interface
+* Layout
+* Media
+* Drawing and Animation
+* Sensors
+* Social
+* Storage
+* Connectivity
+
+Mục đích:
+
+* Chọn thành phần cần đưa vào ứng dụng.
+
+---
+
+### Viewer
+
+Khu vực mô phỏng giao diện điện thoại.
+
+Mục đích:
+
+* Xem trước giao diện.
+* Sắp xếp vị trí các đối tượng.
+
+---
+
+### Components
+
+Danh sách các thành phần đã sử dụng.
+
+Ví dụ:
+
+```text
+Screen1
+Button1
+Label1
+Image1
+```
+
+Mục đích:
+
+* Quản lý các đối tượng trên màn hình.
+
+---
+
+### Properties
+
+Hiển thị thuộc tính của thành phần đang chọn.
+
+Ví dụ:
+
+* Text
+* Width
+* Height
+* FontSize
+* BackgroundColor
+* Visible
+
+Mục đích:
+
+* Thay đổi cách hiển thị và hoạt động của đối tượng.
+
+---
+
+# 5. Kéo thả và thay đổi thuộc tính
+
+Ví dụ tạo Button:
+
+### Bước 1
+
+Kéo Button từ Palette sang Viewer.
+
+### Bước 2
+
+Chọn Button.
+
+### Bước 3
+
+Tại Properties thay đổi:
+
+```text
+Text = Giải phương trình
+Width = Fill Parent
+FontSize = 18
+```
+
+Mục đích:
+
+* Tùy chỉnh giao diện.
+* Cải thiện trải nghiệm người dùng.
+* Giúp ứng dụng trực quan hơn.
+
+---
+
+# 6. Blocks là gì?
+
+Blocks là các khối lệnh trực quan đại diện cho mã nguồn lập trình.
+
+Ví dụ:
+
+```text
+when Button1.Click
+```
+
+tương đương:
+
+```java
+button.setOnClickListener(...)
+```
+
+trong Java.
+
+Mỗi block thực chất là:
+
+* Lệnh điều kiện.
+* Lệnh gán giá trị.
+* Hàm xử lý.
+* Sự kiện.
+* Biến.
+* Toán tử.
+
+được biểu diễn bằng hình ảnh trực quan.
+
+---
+
+# 7. Bản chất của việc kéo thả Block
+
+Khi ghép các block:
+
+```text
+when Button1.Click
+    set Label1.Text to "Xin chào"
+```
+
+thực chất là:
+
+* Tạo luồng xử lý chương trình.
+* Xây dựng thuật toán.
+* Sinh mã nguồn phía sau.
+
+Nghĩa là người dùng không viết code trực tiếp mà lập trình thông qua các khối chức năng.
+
+---
+
+# 8. Ưu điểm của Block Programming
+
+### Dễ học
+
+Người mới bắt đầu có thể lập trình nhanh.
+
+### Trực quan
+
+Dễ nhìn thấy luồng xử lý.
+
+### Ít lỗi cú pháp
+
+Không cần nhớ:
+
+```java
+;
+{}
+()
+```
+
+như các ngôn ngữ lập trình truyền thống.
+
+### Tăng tốc phát triển
+
+Xây dựng ứng dụng đơn giản rất nhanh.
+
+### Phù hợp giáo dục
+
+Hỗ trợ học thuật toán và tư duy lập trình.
+
+---
+
+# 9. Nhược điểm của Block Programming
+
+### Khó mở rộng
+
+Dự án lớn sẽ có rất nhiều block.
+
+### Tốn không gian
+
+Block chiếm diện tích màn hình lớn.
+
+### Khó quản lý
+
+Thuật toán phức tạp trở nên rối.
+
+### Hạn chế tính năng
+
+Không linh hoạt bằng Java hoặc Kotlin.
+
+### Hiệu quả thấp với dự án lớn
+
+Khó phát triển các hệ thống chuyên nghiệp.
+
+---
+
+# 10. Copy và Paste Block bằng Backpack
+
+MIT App Inventor hỗ trợ công cụ:
+
+```text
+Backpack
+```
+
+ở cuối màn hình Blocks.
+
+### Cách sử dụng
+
+Bước 1:
+
+Kéo block vào Backpack.
+
+Bước 2:
+
+Mở Screen khác hoặc Project khác.
+
+Bước 3:
+
+Lấy block từ Backpack ra.
+
+---
+
+## Mục đích của Backpack
+
+* Sao chép block.
+* Tái sử dụng thuật toán.
+* Tiết kiệm thời gian lập trình.
+* Chia sẻ logic giữa nhiều màn hình.
+
+Ví dụ:
+
+Một khối xử lý tính toán ở Screen2 có thể được lưu vào Backpack và sử dụng lại ở Screen khác mà không cần tạo lại từ đầu.
+
+---
+
